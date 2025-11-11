@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import KanbanBoard from "./components/KanbanBoard"
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        minHeight: "100vh",
+        width: "100%",
+        background: "linear-gradient(135deg, #e0f7fa, #f1f8e9)",
+        padding: "20px",
+        boxSizing: "border-box",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <h1
+        style={{
+          fontFamily: "Poppins, sans-serif",
+          fontSize: "2rem",
+          marginBottom: "20px",
+          color: "#333",
+        }}
+      >
+      </h1>
+
+      <KanbanBoard />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
